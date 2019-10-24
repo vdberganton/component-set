@@ -3,34 +3,124 @@
   icon: 'DataTable',
   category: 'DATA',
   type: 'DATATABLE',
-  allowedTypes: [],
+  allowedTypes: ['DATATABLE_COLUMN'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div className={classes.root}>
       {(() => {
-        const { env, getProperty, GetAll, Link } = B;
+        const { env, getProperty, GetAll, Link, Children } = B;
 
         const take = parseInt(options.take, 10) || 50;
 
-        if (env === 'dev' || !options.model) {
+        if (env === 'dev') {
+          const repeaterRef = React.createRef();
+          const tableRef = React.createRef();
+
+          const repeat = () => {
+            if (!repeaterRef.current) {
+              return;
+            }
+            if (
+              repeaterRef.current.previousElementSibling.children.length < 1
+            ) {
+              return;
+            }
+            repeaterRef.current.innerHTML = '';
+            let i = 0;
+            const j = take - 1;
+            for (i, j; i < j; i += 1) {
+              repeaterRef.current.innerHTML +=
+                repeaterRef.current.previousElementSibling.children[1].outerHTML;
+            }
+          };
+
+          React.useEffect(() => {
+            repeat();
+          });
+
+          React.useEffect(() => {
+            const mutationObserver = new MutationObserver(() => {
+              repeat();
+            });
+            mutationObserver.observe(tableRef.current, {
+              attributes: true,
+              characterData: true,
+              childList: true,
+              subtree: true,
+              attributeOldValue: false,
+              characterDataOldValue: false,
+            });
+          });
+
           return (
-            <div className={classes.table}>
-              <div className={classes.row}>
+            <>
+              {options.searchProperty && (
                 <div
-                  className={[classes.column, classes.columnHeading].join(' ')}
+                  className={[classes.tableHeader, classes.noEvents].join(' ')}
                 >
-                  Heading
+                  {options.searchProperty && (
+                    <Search
+                      name="{property}"
+                      search=""
+                      isTyping=""
+                      setIsTyping=""
+                    />
+                  )}
+                </div>
+              )}
+              <div className={classes.table}>
+                <div className={classes.row}>
+                  <Children headerOnly>{children}</Children>
+                </div>
+                <div ref={tableRef} className={classes.row}>
+                  <Children>{children}</Children>
                 </div>
               </div>
-              {Array.from(Array(take).keys()).map(key => (
-                <div key={key} className={classes.row}>
-                  <div className={classes.column}>
-                    You are either in the builder environment or the model id
-                    you selected is incorrect
-                  </div>
+              <div ref={repeaterRef} className={classes.autoRow} />
+              <div className={classes.tableFooter}>
+                <Pagination
+                  totalCount={15}
+                  resultCount={parseInt(options.take, 10)}
+                />
+              </div>
+            </>
+          );
+        }
+
+        if (!options.model) {
+          return (
+            <>
+              {options.searchProperty && (
+                <div
+                  className={[classes.tableHeader, classes.noEvents].join(' ')}
+                >
+                  {options.searchProperty && (
+                    <Search
+                      name="{property}"
+                      search=""
+                      isTyping=""
+                      setIsTyping=""
+                    />
+                  )}
                 </div>
-              ))}
-            </div>
+              )}
+              <div className={classes.table}>
+                <div className={classes.row}>
+                  <Children headerOnly>{children}</Children>
+                </div>
+                {Array.from(Array(take).keys()).map(rowKey => (
+                  <div key={rowKey} className={classes.row}>
+                    <Children>{children}</Children>
+                  </div>
+                ))}
+              </div>
+              <div className={classes.tableFooter}>
+                <Pagination
+                  totalCount={15}
+                  resultCount={parseInt(options.take, 10)}
+                />
+              </div>
+            </>
           );
         }
 
@@ -111,21 +201,16 @@
 
         return (
           <>
-            <div className={classes.tableHeader}>
-              <div>
-                {options.title && (
-                  <h1 className={classes.title}>{options.title}</h1>
-                )}
-              </div>
-              {searchProp && (
+            {searchProp && (
+              <div className={classes.tableHeader}>
                 <Search
                   name={searchProp.name}
                   search={searchParam}
                   isTyping={isTyping}
                   setIsTyping={setIsTyping}
                 />
-              )}
-            </div>
+              </div>
+            )}
             <GetAll
               modelId={options.model}
               __SECRET_VARIABLES_DO_NOT_USE={variables}
@@ -145,46 +230,35 @@
                   return <EmptyTable text="No results" />;
                 }
 
-                const resultKeys = Object.keys(results[0]);
-
-                const propertyNames = options.properties.map(id => {
-                  const property = getProperty(id);
-                  return property && property.name;
-                });
-
                 return (
                   <>
                     <div className={classes.table}>
                       <div className={classes.row}>
-                        {resultKeys
-                          .filter(
-                            heading =>
-                              options.properties.length === 0 ||
-                              propertyNames.includes(heading),
-                          )
-                          .map(heading => (
-                            <TableHeading
-                              heading={heading}
-                              search={searchParam}
-                            />
-                          ))}
+                        <Children
+                          location={location}
+                          history={history}
+                          page={page}
+                          order={order}
+                          field={field}
+                          index={index}
+                          headerOnly
+                        >
+                          {children}
+                        </Children>
                       </div>
-                      {results.map(value => (
+                      {results.map((value, index) => (
                         <div key={value[0]} className={classes.row}>
-                          {Object.keys(value)
-                            .filter(
-                              val =>
-                                options.properties.length === 0 ||
-                                propertyNames.includes(val),
-                            )
-                            .map((val, index) => (
-                              <div
-                                key={`${resultKeys[index]}`}
-                                className={classes.column}
-                              >
-                                {value[val]}
-                              </div>
-                            ))}
+                          <Children
+                            location={location}
+                            history={history}
+                            page={page}
+                            order={order}
+                            field={field}
+                            index={index}
+                            value={value}
+                          >
+                            {children}
+                          </Children>
                         </div>
                       ))}
                     </div>
@@ -226,7 +300,7 @@
               <input
                 className={classes.search}
                 type="text"
-                value={search}
+                defaultValue={search}
                 onChange={({ target: { value } }) =>
                   history.push(`${pathname}?search=${value}`)
                 }
@@ -304,58 +378,6 @@
                 </div>
               </div>
             </>
-          );
-        }
-
-        function TableHeading({ heading, search }) {
-          const {
-            location: { pathname },
-          } = useRouter();
-
-          const to = [
-            pathname,
-            '?',
-            page ? `page=${page}&` : '',
-            search ? `search=${search}&` : '',
-            `sort=${heading}&`,
-            order && field === heading
-              ? `order=${order === 'desc' ? 'asc' : 'desc'}`
-              : 'order=asc',
-          ].join('');
-
-          return (
-            <div
-              key={heading}
-              className={[classes.column, classes.columnHeading].join(' ')}
-            >
-              <Link to={to} className={classes.columnHeadingLink}>
-                {heading
-                  .split('')
-                  .map((char, index) => {
-                    const charUppercased = char.toUpperCase();
-
-                    if (index === 0) {
-                      return charUppercased;
-                    }
-
-                    if (char === charUppercased) {
-                      return ` ${char.toLowerCase()}`;
-                    }
-
-                    return char;
-                  })
-                  .join('')}
-                <i
-                  className={[
-                    classes.columnHeadingIcon,
-                    field === heading &&
-                      (order === 'desc'
-                        ? 'zmdi zmdi-long-arrow-up'
-                        : 'zmdi zmdi-long-arrow-down'),
-                  ].join(' ')}
-                />
-              </Link>
-            </div>
           );
         }
 
@@ -445,20 +467,14 @@
         marginLeft: ({ options: { outerSpacing } }) =>
           getSpacing(outerSpacing[3]),
       },
+      noEvents: {
+        pointerEvents: 'none',
+      },
       tableHeader: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-end',
         minHeight: '4rem',
-      },
-      title: {
-        margin: 0,
-        fontFamily: style.getFontFamily('Title2'),
-        fontSize: style.getFontSize('Title2'),
-        fontWeight: style.getFontWeight('Title2'),
-        textTransform: style.getTextTransform('Title2'),
-        letterSpacing: style.getLetterSpacing('Title2'),
-        color: style.getFontColor('Title2'),
       },
       searchWrapper: {
         display: 'flex',
@@ -480,9 +496,35 @@
         display: 'table',
         width: '100%',
         borderCollapse: 'collapse',
+        tableLayout: 'fixed',
+        '& $row:first-child > div': {
+          borderBottom: `0.125rem solid ${style.getColor('Accent1')}`,
+        },
       },
       row: {
         display: 'table-row',
+      },
+      autoRow: {
+        display: 'table',
+        width: '100%',
+        borderCollapse: 'collapse',
+        tableLayout: 'fixed',
+        position: 'relative',
+        pointerEvents: 'none',
+        '& > *': {
+          pointerEvents: 'none',
+        },
+        '&::after': {
+          content: '""',
+          display: 'block',
+          pointerEvents: 'none',
+          position: 'absolute',
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: 'rgba(255,255,255,0.3)',
+        },
       },
       column: {
         display: 'table-cell',
