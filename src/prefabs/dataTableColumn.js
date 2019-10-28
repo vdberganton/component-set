@@ -13,14 +13,14 @@
           type: 'PROPERTY',
         },
         {
-          type: 'VARIABLE',
+          type: 'TEXT',
           label: 'Header text',
           key: 'headerText',
-          value: ['Column'],
+          value: 'Column',
         },
         {
           value: 'Body1',
-          label: 'Type',
+          label: 'Header Type',
           key: 'type',
           type: 'FONT',
         },
