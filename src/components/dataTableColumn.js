@@ -63,7 +63,7 @@
 
           const headingText =
             options.headerText.length > 0
-              ? options.headerText[0]
+              ? options.headerText
               : heading
                   .split('')
                   .map((char, charIndex) => {
