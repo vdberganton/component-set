@@ -21,22 +21,16 @@
               return;
             }
             if (
-              repeaterRef.current.previousElementSibling.children.length < 1
+              repeaterRef.current.previousElementSibling.children.length === 0
             ) {
               return;
             }
             repeaterRef.current.innerHTML = '';
-            let i = 0;
-            const j = take - 1;
-            for (i, j; i < j; i += 1) {
+            for (let i = 0, j = take - 1; i < j; i += 1) {
               repeaterRef.current.innerHTML +=
                 repeaterRef.current.previousElementSibling.children[1].outerHTML;
             }
           };
-
-          React.useEffect(() => {
-            repeat();
-          });
 
           React.useEffect(() => {
             const mutationObserver = new MutationObserver(() => {
@@ -50,6 +44,7 @@
               attributeOldValue: false,
               characterDataOldValue: false,
             });
+            repeat();
           });
 
           return (
