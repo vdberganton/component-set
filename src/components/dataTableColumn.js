@@ -139,7 +139,7 @@
         color: theme.getFontColor('Body1'),
         borderBottom: `0.0625rem solid ${theme.getColor('Accent1')}`,
         pointerEvents: ({ parent }) =>
-          parent && parent.headerOnly && env === 'dev' ? 'none' : 'all',
+          parent && parent.headerOnly && env === 'dev' ? 'none' : null,
         [`@media ${B.mediaMinWidth(768)}`]: {
           fontSize: theme.getFontSize('Body1', 'Portrait'),
         },
