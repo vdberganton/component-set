@@ -60,6 +60,7 @@
               type: 'CUSTOM',
               label: 'Text Alignment',
               key: 'textAlignment',
+              value: 'left',
               configuration: {
                 as: 'BUTTONGROUP',
                 dataType: 'string',
