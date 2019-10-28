@@ -146,14 +146,13 @@
             },
             {
               type: 'CUSTOM',
-              label: 'Text Alignment',
-              key: 'textAlignment',
-              value: 'inherit',
+              label: 'Column Alignment',
+              key: 'horizontalAlignment',
+              value: 'left',
               configuration: {
                 as: 'BUTTONGROUP',
                 dataType: 'string',
                 allowedInput: [
-                  { name: 'Inherit', value: 'inherit' },
                   { name: 'Left', value: 'left' },
                   { name: 'Center', value: 'center' },
                   { name: 'Right', value: 'right' },

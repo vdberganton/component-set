@@ -125,7 +125,7 @@
     </div>
   ),
   styles: B => {
-    const { theme } = B;
+    const { theme, env } = B;
     return {
       column: {
         display: 'table-cell',
@@ -138,6 +138,8 @@
         letterSpacing: theme.getLetterSpacing('Body1'),
         color: theme.getFontColor('Body1'),
         borderBottom: `0.0625rem solid ${theme.getColor('Accent1')}`,
+        pointerEvents: ({ parent }) =>
+          parent && parent.headerOnly && env === 'dev' ? 'none' : null,
         [`@media ${B.mediaMinWidth(768)}`]: {
           fontSize: theme.getFontSize('Body1', 'Portrait'),
         },
@@ -175,7 +177,7 @@
         padding: '0.75rem 1rem 0.75rem 0',
       },
       columnHeadingLink: {
-        display: 'flex',
+        display: 'inline-flex',
         alignItems: 'center',
         whiteSpace: 'nowrap',
         textDecoration: 'none',
