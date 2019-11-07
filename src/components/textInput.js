@@ -21,21 +21,13 @@
           formLabel.parentElement.style.width = `${width}px`;
         };
 
-        const unsetLabelWidth = target => {
-          const formLabel = target.parentElement.querySelector(
-            '[data-element="form-label"]',
-          );
-          formLabel.style.width = null;
-        };
-
         React.useEffect(() => {
           if (
-            (B.env === 'prod' && value) ||
-            (B.env === 'dev' && options.formComponentValue)
+            options.formComponentLabel &&
+            ((B.env === 'prod' && value) ||
+              (B.env === 'dev' && options.formComponentValue))
           ) {
             setLabelWidth(inputRef.current);
-          } else if (B.env === 'dev' && options.formComponentValue === '') {
-            unsetLabelWidth(inputRef.current);
           }
           if (options.showValid && options.formComponentRequired) {
             setValid(!!value);
@@ -73,11 +65,6 @@
                 onFocus={e => {
                   setLabelWidth(e.target);
                 }}
-                onBlur={e => {
-                  if (!value) {
-                    unsetLabelWidth(e.target);
-                  }
-                }}
                 defaultValue={options.formComponentValue}
                 required={options.formComponentRequired}
               />
@@ -85,15 +72,17 @@
                 <div
                   className={[classes.border, classes.borderStart].join(' ')}
                 />
-                <div
-                  data-element="form-label"
-                  className={[classes.border, classes.borderMiddle].join(' ')}
-                >
-                  <span className={classes.formLabel}>
-                    {options.formComponentLabel}
-                    {options.formComponentRequired ? ' *' : ''}
-                  </span>
-                </div>
+                {options.formComponentLabel && (
+                  <div
+                    data-element="form-label"
+                    className={[classes.border, classes.borderMiddle].join(' ')}
+                  >
+                    <span className={classes.formLabel}>
+                      {options.formComponentLabel}
+                      {options.formComponentRequired ? ' *' : ''}
+                    </span>
+                  </div>
+                )}
                 <div
                   className={[classes.border, classes.borderEnd].join(' ')}
                 />
