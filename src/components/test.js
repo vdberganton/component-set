@@ -9,7 +9,16 @@
     const { Button } = Grommet;
     const { Gamepad } = Icons;
 
+    const sizes = {
+      XS: 'xsmall',
+      S: 'small',
+      M: 'medium',
+      L: 'large',
+      XL: 'xlarge',
+    };
+
     const Custom = styled.button`
+      display: inline-block;
       margin: 0.5rem;
       padding: 0.5rem 1rem;
       border: 0.125rem solid #000;
@@ -35,12 +44,16 @@
     `;
 
     return (
-      <section className={classes.test}>
-        <Button icon={<Gamepad size="xlarge" />} onClick={() => {}} />
-        <Custom>Button</Custom>
+      <section className={classes.root}>
+        <Button
+          className={classes.button}
+          icon={<Gamepad size={sizes[options.size]} className={classes.icon} />}
+          onClick={() => {}}
+        />
+        <Custom className={classes.custom}>Button</Custom>
         <Custom fill>Button</Custom>
-        <Custom color="#00ff80">Button</Custom>
-        <Custom fill color="#00ff80">
+        <Custom color="#00d060">Button</Custom>
+        <Custom fill color="#00d060">
           Button
         </Custom>
       </section>
@@ -48,12 +61,39 @@
   })(),
   styles: B => t => {
     const style = new B.Styling(t);
+
+    const sizes = {
+      XS: '0.5rem',
+      S: '1rem',
+      M: '1.5rem',
+      L: '2rem',
+      XL: '2.5rem',
+    };
+
     return {
-      test: {
+      root: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
         padding: '0.5rem',
         borderRadius: '0.25rem',
         // background: '#00ff80',
+        background: ({ options: { background } }) => style.getColor(background),
+      },
+      custom: {
+        color: '#fff',
+        borderRadius: '1rem',
         background: ({ options: { color } }) => style.getColor(color),
+        borderColor: ({ options: { color } }) => style.getColor(color),
+        fontSize: ({ options: { size } }) => sizes[size],
+      },
+      button: {
+        display: 'flex',
+        justifyContent: 'center',
+      },
+      icon: {
+        fill: ({ options: { color } }) => style.getColor(color),
+        stroke: ({ options: { color } }) => style.getColor(color),
       },
     };
   },
