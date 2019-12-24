@@ -6,8 +6,21 @@
   orientation: 'VERTICAL',
   allowedTypes: [],
   jsx: (() => {
-    const { Button } = Grommet;
+    const { Button, Grommet: G } = Grommet;
     const { Gamepad } = Icons;
+
+    const theme = {
+      global: {
+        colors: {
+          main: '#7d4cdb',
+          custom: '#80ff00',
+        },
+        font: {
+          family: 'Roboto',
+          size: '1rem',
+        },
+      },
+    };
 
     const sizes = {
       XS: 'xsmall',
@@ -44,18 +57,23 @@
     `;
 
     return (
-      <section className={classes.root}>
-        <Button
-          className={classes.button}
-          icon={<Gamepad size={sizes[options.size]} className={classes.icon} />}
-          onClick={() => {}}
-        />
-        <Custom className={classes.custom}>Button</Custom>
-        <Custom fill>Button</Custom>
-        <Custom color="#00d060">Button</Custom>
-        <Custom fill color="#00d060">
-          Button
-        </Custom>
+      <section>
+        <G theme={theme} className={classes.root}>
+          <Button
+            className={classes.button}
+            icon={
+              <Gamepad size={sizes[options.size]} className={classes.icon} />
+            }
+            onClick={() => {}}
+          />
+          <Button color="custom">Hoi</Button>
+          <Custom className={classes.custom}>Button</Custom>
+          <Custom fill>Button</Custom>
+          <Custom color="#00d060">Button</Custom>
+          <Custom fill color="#00d060">
+            Button
+          </Custom>
+        </G>
       </section>
     );
   })(),
