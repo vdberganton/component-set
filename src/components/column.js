@@ -4,7 +4,7 @@
   type: 'COLUMN',
   category: 'LAYOUT',
   orientation: 'VERTICAL',
-  allowedTypes: ['BUTTON', 'GAME'],
+  allowedTypes: ['BUTTON', 'TEST'],
   jsx: (() => {
     const isEmpty = children.length === 0;
     const isPristine = isEmpty && B.env === 'dev';

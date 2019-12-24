@@ -1,13 +1,13 @@
 (() => ({
-  name: 'Game',
-  icon: 'GameIcon',
+  name: 'Test',
+  icon: 'TestIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Game',
+      name: 'Test',
       options: [
         {
-          value: 'Primary',
+          value: 'Accent1',
           label: 'Color',
           key: 'color',
           type: 'COLOR',

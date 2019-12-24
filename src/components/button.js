@@ -29,7 +29,7 @@
         border: 0,
         borderRadius: '0.25rem',
         color: style.getColor('White'),
-        backgroundColor: ({ options: { color } }) => style.getColor(color),
+        background: ({ options: { color } }) => style.getColor(color),
         opacity: ({ options: { disabled } }) => (disabled === 'true' ? 0.3 : 1),
         font: '1rem Roboto, sans-serif',
         '&:hover, &:active, &:focus': {
