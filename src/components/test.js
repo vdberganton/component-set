@@ -18,10 +18,18 @@
       color: #000;
       font: 1rem Roboto, sans-serif;
 
-      ${props =>
-        props.primary &&
+      ${({ color }) =>
+        color &&
         css`
-          background: #000;
+          color: ${color};
+          border-color: ${color};
+        `}
+
+      ${({ fill, color = '#000' }) =>
+        fill &&
+        css`
+          background: ${color};
+          border-color: ${color};
           color: #fff;
         `}
     `;
@@ -30,7 +38,11 @@
       <section className={classes.test}>
         <Button icon={<Gamepad size="xlarge" />} onClick={() => {}} />
         <Custom>Button</Custom>
-        <Custom primary>Button</Custom>
+        <Custom fill>Button</Custom>
+        <Custom color="#00ff80">Button</Custom>
+        <Custom fill color="#00ff80">
+          Button
+        </Custom>
       </section>
     );
   })(),
@@ -38,9 +50,10 @@
     const style = new B.Styling(t);
     return {
       test: {
+        padding: '0.5rem',
+        borderRadius: '0.25rem',
         // background: '#00ff80',
         background: ({ options: { color } }) => style.getColor(color),
-        borderRadius: '0.25rem',
       },
     };
   },
