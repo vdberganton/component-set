@@ -12,6 +12,7 @@
     const theme = {
       global: {
         colors: {
+          test: '#ff4000',
           main: '#7d4cdb',
           custom: '#80ff00',
         },
@@ -66,7 +67,7 @@
             }
             onClick={() => {}}
           />
-          <Button color="custom">Hoi</Button>
+          <Button color="test">Hoi</Button>
           <Custom className={classes.custom}>Button</Custom>
           <Custom fill>Button</Custom>
           <Custom color="#00d060">Button</Custom>
