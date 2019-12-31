@@ -2,7 +2,7 @@
   name: 'DataTable',
   icon: 'DataTable',
   category: 'DATA',
-  type: 'DATATABLE',
+  type: 'CONTAINER_COMPONENT',
   allowedTypes: ['DATATABLE_COLUMN'],
   orientation: 'HORIZONTAL',
   jsx: (

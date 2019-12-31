@@ -2,8 +2,8 @@
   name: 'Panel',
   icon: 'PanelIcon',
   category: 'LAYOUT',
-  type: 'PANEL',
-  allowedTypes: ['ROW', 'BODY_COMPONENT'],
+  type: 'CONTAINER_COMPONENT',
+  allowedTypes: ['BODY_COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div className={classes.panel}>

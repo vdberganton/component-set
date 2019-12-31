@@ -2,7 +2,7 @@
   name: 'Text',
   icon: 'HeadingIcon',
   category: 'CONTENT',
-  type: 'TEXT',
+  type: 'COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',
   jsx: (() => {

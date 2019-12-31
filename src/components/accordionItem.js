@@ -3,20 +3,7 @@
   icon: 'AccordionItemIcon',
   category: 'LAYOUT',
   type: 'ACCORDION_ITEM',
-  allowedTypes: [
-    'ALERT',
-    'BREADCRUMB',
-    'BUTTON',
-    'DATATABLE',
-    'DIVIDER',
-    'FORM',
-    'IMAGE',
-    'PARTIAL',
-    'PANEL',
-    'PROGRESS',
-    'TABS',
-    'TEXT',
-  ],
+  allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div className={classes.root}>

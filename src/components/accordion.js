@@ -2,7 +2,7 @@
   name: 'Accordion',
   icon: 'AccordionIcon',
   category: 'LAYOUT',
-  type: 'ACCORDION',
+  type: 'CONTAINER_COMPONENT',
   allowedTypes: ['ACCORDION_ITEM'],
   orientation: 'HORIZONTAL',
   jsx: (

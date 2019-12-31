@@ -2,7 +2,7 @@
   name: 'Tab',
   icon: 'TabIcon',
   category: 'LAYOUT',
-  type: 'TAB',
+  type: 'CONTAINER_COMPONENT',
   allowedTypes: ['TAB_ITEM'],
   orientation: 'HORIZONTAL',
   jsx: (

@@ -2,7 +2,7 @@
   name: 'TextInput',
   icon: 'TextInputIcon',
   category: 'FORM',
-  type: 'TEXT_INPUT',
+  type: 'FORM_COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',
   jsx: (

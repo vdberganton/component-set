@@ -2,7 +2,7 @@
   name: 'PageBody',
   icon: 'RowIcon',
   category: 'LAYOUT',
-  type: 'PAGE_BODY',
+  type: 'BODY_COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',
   jsx: (

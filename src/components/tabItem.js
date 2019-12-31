@@ -3,7 +3,7 @@
   icon: 'TabItemIcon',
   category: 'TAB',
   type: 'TAB_ITEM',
-  allowedTypes: ['ROW'],
+  allowedTypes: ['BODY_COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div>
