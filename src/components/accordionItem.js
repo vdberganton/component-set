@@ -3,7 +3,7 @@
   icon: 'AccordionItemIcon',
   category: 'LAYOUT',
   type: 'ACCORDION_ITEM',
-  allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'COMPONENT'],
+  allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div className={classes.root}>

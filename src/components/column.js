@@ -3,7 +3,7 @@
   icon: 'ColumnIcon',
   category: 'LAYOUT',
   type: 'LAYOUT_COMPONENT',
-  allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'COMPONENT'],
+  allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'VERTICAL',
   jsx: (
     <div className={classes.column}>

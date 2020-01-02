@@ -2,7 +2,7 @@
   name: 'Button',
   icon: 'ButtonIcon',
   category: 'CONTENT',
-  type: 'COMPONENT',
+  type: 'CONTENT_COMPONENT',
   allowedTypes: [],
   orientation: 'VERTICAL',
   jsx: (

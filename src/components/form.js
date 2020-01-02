@@ -3,7 +3,7 @@
   icon: 'FormIcon',
   category: 'FORM',
   type: 'CONTAINER_COMPONENT',
-  allowedTypes: ['CONTAINER_COMPONENT', 'FORM_COMPONENT', 'COMPONENT'],
+  allowedTypes: ['CONTAINER_COMPONENT', 'FORM_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div className={classes.root}>

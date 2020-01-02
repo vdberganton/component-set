@@ -3,7 +3,7 @@
   icon: 'ColumnIcon',
   category: 'LAYOUT',
   type: 'PAGE_CONTENT',
-  allowedTypes: ['CONTAINER_COMPONENT', 'COMPONENT'],
+  allowedTypes: ['CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'VERTICAL',
   jsx: (
     <div className={classes.pageContent}>

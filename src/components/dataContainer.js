@@ -3,7 +3,7 @@
   icon: 'DataContainer',
   category: 'CONTENT',
   type: 'CONTAINER_COMPONENT',
-  allowedTypes: ['CONTAINER_COMPONENT', 'COMPONENT'],
+  allowedTypes: ['CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (
     <div>
