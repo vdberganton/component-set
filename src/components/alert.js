@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Alert',
+  name: '@betty-blocks/default/Alert',
   icon: 'AlertIcon',
   category: 'CONTENT',
   type: 'ALERT',

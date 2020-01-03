@@ -1,5 +1,5 @@
 (() => ({
-  name: 'TextInput',
+  name: '@betty-blocks/default/TextInput',
   icon: 'TextInputIcon',
   category: 'FORM',
   type: 'TEXT_INPUT',

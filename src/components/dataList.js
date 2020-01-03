@@ -1,5 +1,5 @@
 (() => ({
-  name: 'DataList',
+  name: '@betty-blocks/default/DataList',
   icon: 'DataList',
   category: 'CONTENT',
   type: 'DATALIST',

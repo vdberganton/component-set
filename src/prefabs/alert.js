@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Alert',
+  name: '@betty-blocks/default/Alert',
   icon: 'AlertIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Alert',
+      name: '@betty-blocks/default/Alert',
       options: [
         {
           type: 'VARIABLE',

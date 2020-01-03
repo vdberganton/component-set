@@ -1,5 +1,5 @@
 (() => ({
-  name: 'TabItem',
+  name: '@betty-blocks/default/TabItem',
   icon: 'TabItemIcon',
   category: 'TAB',
   type: 'TAB_ITEM',

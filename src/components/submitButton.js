@@ -1,5 +1,5 @@
 (() => ({
-  name: 'SubmitButton',
+  name: '@betty-blocks/default/SubmitButton',
   icon: 'SubmitButtonIcon',
   category: 'FORM',
   type: 'SUBMIT_BUTTON',

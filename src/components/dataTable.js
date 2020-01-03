@@ -1,5 +1,5 @@
 (() => ({
-  name: 'DataTable',
+  name: '@betty-blocks/default/DataTable',
   icon: 'DataTable',
   category: 'DATA',
   type: 'DATATABLE',

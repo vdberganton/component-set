@@ -1,14 +1,14 @@
 (() => ({
-  name: 'Breadcrumb',
+  name: '@betty-blocks/default/Breadcrumb',
   icon: 'BreadcrumbIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'Breadcrumb',
+      name: '@betty-blocks/default/Breadcrumb',
       options: [],
       descendants: [
         {
-          name: 'BreadcrumbItem',
+          name: '@betty-blocks/default/BreadcrumbItem',
           options: [
             {
               type: 'VARIABLE',
@@ -26,7 +26,7 @@
           descendants: [],
         },
         {
-          name: 'BreadcrumbItem',
+          name: '@betty-blocks/default/BreadcrumbItem',
           options: [
             {
               type: 'VARIABLE',
@@ -44,7 +44,7 @@
           descendants: [],
         },
         {
-          name: 'BreadcrumbItem',
+          name: '@betty-blocks/default/BreadcrumbItem',
           options: [
             {
               type: 'VARIABLE',

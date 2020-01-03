@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Sub',
+  name: '@betty-blocks/default/Sub',
   icon: 'SubIcon',
   category: 'SUB',
   type: 'SUB',

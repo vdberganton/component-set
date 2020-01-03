@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Divider',
+  name: '@betty-blocks/default/Divider',
   icon: 'HorizontalRuleIcon',
   category: 'CONTENT',
   type: 'DIVIDER',

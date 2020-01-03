@@ -1,10 +1,10 @@
 (() => ({
-  name: 'TextInput',
+  name: '@betty-blocks/default/TextInput',
   icon: 'TextInputIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'TextInput',
+      name: '@betty-blocks/default/TextInput',
       options: [
         {
           value: '',

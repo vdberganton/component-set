@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Button',
+  name: '@betty-blocks/default/Button',
   icon: 'ButtonIcon',
   category: 'CONTENT',
   type: 'BUTTON',

@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Navigation Bar',
+  name: '@betty-blocks/default/NavigationBar',
   icon: 'NavbarIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'NavigationBar',
+      name: '@betty-blocks/default/NavigationBar',
       options: [
         {
           value: '',
@@ -27,7 +27,7 @@
       ],
       descendants: [
         {
-          name: 'NavigationItem',
+          name: '@betty-blocks/default/NavigationItem',
           options: [
             {
               type: 'VARIABLE',
@@ -82,7 +82,7 @@
           descendants: [],
         },
         {
-          name: 'NavigationItem',
+          name: '@betty-blocks/default/NavigationItem',
           options: [
             {
               type: 'VARIABLE',
@@ -137,7 +137,7 @@
           descendants: [],
         },
         {
-          name: 'NavigationItem',
+          name: '@betty-blocks/default/NavigationItem',
           options: [
             {
               type: 'VARIABLE',

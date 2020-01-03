@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Text',
+  name: '@betty-blocks/default/Text',
   icon: 'ParagraphIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Text',
+      name: '@betty-blocks/default/Text',
       options: [
         {
           type: 'VARIABLE',
