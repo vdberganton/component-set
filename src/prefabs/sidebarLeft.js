@@ -1,6 +1,6 @@
 (() => ({
   name: '@betty-blocks/default/SidebarLeft',
-  icon: 'SidebarLeftIcon',
+  icon: 'AlertIcon',
   category: 'NAVIGATION',
   structure: [
     {
