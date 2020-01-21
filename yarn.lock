@@ -144,10 +144,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@betty-blocks/cli@^23.0.0-alpha.6":
-  version "23.0.0-alpha.6"
-  resolved "https://registry.npmjs.org/@betty-blocks/cli/-/cli-23.0.0-alpha.6.tgz#b9a154cfabb4a7b4b3c037fde3235297cf27da04"
-  integrity sha512-24Lrpx6hvhHbrsp41R2I2DtSlnysoamPJMB5MvX20Ttb5HWYbCZVNR1xFUK2BVPe9Gmf2aweiv0h5M7vMyVGvw==
+"@betty-blocks/cli@^23.0.0-alpha.7":
+  version "23.0.0-alpha.7"
+  resolved "https://registry.npmjs.org/@betty-blocks/cli/-/cli-23.0.0-alpha.7.tgz#40e125f6aa09075cd6eabd901511a954ada54ac5"
+  integrity sha512-S3mGXC0dUCDP3uNSuVx6vpSTwW9V1IJ313bFW5g8aaO0kHe6oTQSd+ddIhQLb2J4cL2bS7PoeHt/xCrONvrk0A==
   dependencies:
     "@azure/ms-rest-js" "^2.0.4"
     "@azure/storage-blob" "^10.3.0"

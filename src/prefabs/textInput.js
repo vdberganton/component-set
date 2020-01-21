@@ -8,6 +8,12 @@
       options: [
         {
           value: '',
+          label: 'Input',
+          key: 'actionInputId',
+          type: 'ACTION_INPUT',
+        },
+        {
+          value: '',
           label: 'Name',
           key: 'formComponentName',
           type: 'TEXT',
