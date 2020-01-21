@@ -36,25 +36,28 @@
         const { Action, Children } = B;
         const { actionId } = options;
         const [state, setState] = useState({});
-        console.log(state);
+
         return (
           <Action actionId={actionId}>
-            {(callAction, { loading, error, data }) => {
-              console.log(loading);
-              console.log(error);
-              console.log(data);
+            {(callAction, { data }) => {
+              if (
+                data &&
+                data[`action${actionId}`] &&
+                data[`action${actionId}`].token
+              ) {
+                localStorage.setItem('TOKEN', data[`action${actionId}`].token);
+              }
               return (
                 <form
                   onSubmit={event => {
                     event.preventDefault();
-                    callAction({ variables: { variables: state } });
+                    callAction({ variables: { input: { variables: state } } });
                   }}
                   className={classes.form}
                 >
                   <Children state={state} setState={setState}>
                     {children}
                   </Children>
-                  <button>Submit</button>
                 </form>
               );
             }}
