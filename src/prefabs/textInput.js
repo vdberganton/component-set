@@ -13,12 +13,6 @@
           type: 'ACTION_INPUT',
         },
         {
-          value: '',
-          label: 'Name',
-          key: 'formComponentName',
-          type: 'TEXT',
-        },
-        {
           value: 'Label text',
           label: 'Label text',
           key: 'formComponentLabel',
@@ -39,12 +33,6 @@
               { name: 'Email', value: 'email' },
             ],
           },
-        },
-        {
-          value: '',
-          label: 'Input text',
-          key: 'formComponentValue',
-          type: 'TEXT',
         },
         {
           value: false,

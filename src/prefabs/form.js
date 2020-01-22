@@ -13,10 +13,10 @@
           type: 'ACTION',
         },
         {
-          value: '',
-          label: 'Redirect after submit',
-          key: 'redirect',
           type: 'ENDPOINT',
+          label: 'Redirect to endpoint after success',
+          key: 'formEndpoint',
+          value: '',
         },
         {
           value: 'Thanks for submitting the form!',
@@ -43,13 +43,19 @@
           options: [
             {
               value: '',
-              label: 'Input',
+              label: 'Input variable',
               key: 'actionInputId',
               type: 'ACTION_INPUT',
             },
             {
+              value: 'Label',
+              label: 'Label',
+              key: 'formComponentLabel',
+              type: 'TEXT',
+            },
+            {
               value: 'text',
-              label: 'Type',
+              label: 'Input variable type',
               key: 'formComponentType',
               type: 'CUSTOM',
               configuration: {
@@ -62,18 +68,6 @@
                   { name: 'Email', value: 'email' },
                 ],
               },
-            },
-            {
-              value: 'Label',
-              label: 'Label',
-              key: 'formComponentLabel',
-              type: 'TEXT',
-            },
-            {
-              value: '',
-              label: 'Default value',
-              key: 'formComponentValue',
-              type: 'TEXT',
             },
             {
               value: false,
@@ -94,6 +88,12 @@
               type: 'ACTION_INPUT',
             },
             {
+              value: 'Label',
+              label: 'Label',
+              key: 'formComponentLabel',
+              type: 'TEXT',
+            },
+            {
               value: 'text',
               label: 'Type',
               key: 'formComponentType',
@@ -108,18 +108,6 @@
                   { name: 'Email', value: 'email' },
                 ],
               },
-            },
-            {
-              value: 'Label',
-              label: 'Label',
-              key: 'formComponentLabel',
-              type: 'TEXT',
-            },
-            {
-              value: '',
-              label: 'Default value',
-              key: 'formComponentValue',
-              type: 'TEXT',
             },
             {
               value: false,

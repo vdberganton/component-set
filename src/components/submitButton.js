@@ -22,9 +22,7 @@
           <span
             className={[
               classes.loader,
-              options.formStatus && options.formStatus === 'waiting'
-                ? classes.show
-                : classes.hidden,
+              parent.loading ? classes.show : classes.hidden,
             ].join(' ')}
           />
         </button>
@@ -120,7 +118,7 @@
         border: '0.1875rem solid #ffffff',
         borderRadius: '50%',
         borderTop: '0.1875rem solid transparent',
-        animation: 'loading infinite linear 1s',
+        animation: '$loading infinite linear 1s',
       },
       show: {
         display: 'inline-block',

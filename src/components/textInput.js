@@ -8,12 +8,10 @@
   jsx: (
     <div className={classes.root}>
       {(() => {
-        const { env, getActionInput } = B;
+        const { getActionInput } = B;
         const {
           formComponentLabel,
-          formComponentName,
           formComponentRequired,
-          formComponentValue,
           formComponentType,
           handleChange,
           actionInputId,
@@ -21,10 +19,13 @@
         } = options;
 
         const [valid, setValid] = useState(true);
+        const [currentValue, setCurrentValue] = useState();
         const inputRef = React.createRef();
 
         const actionInput = getActionInput(actionInputId);
-        const value = actionInput ? parent.state[actionInput.name] : '';
+        const value = actionInput
+          ? parent.state[actionInput.name]
+          : currentValue;
 
         const setLabelWidth = target => {
           const formLabel = target.parentElement.querySelector(
@@ -43,11 +44,7 @@
         };
 
         React.useEffect(() => {
-          if (
-            formComponentLabel &&
-            ((B.env === 'prod' && value) ||
-              (B.env === 'dev' && formComponentValue))
-          ) {
+          if (formComponentLabel && (B.env === 'prod' && value)) {
             setLabelWidth(inputRef.current);
           }
           if (showValid && formComponentRequired) {
@@ -68,12 +65,9 @@
                 type={formComponentType}
                 className={[
                   classes.formControl,
-                  env === 'dev' ? classes.noEvents : '',
-                  value || (env === 'dev' && formComponentValue)
-                    ? classes.hasValue
-                    : '',
+                  B.env === 'dev' ? classes.noEvents : '',
+                  value ? classes.hasValue : '',
                 ].join(' ')}
-                name={formComponentName}
                 onChange={event => {
                   const {
                     target: { value: eventValue },
@@ -89,6 +83,8 @@
                       ...parent.state,
                       [actionInput.name]: eventValue,
                     });
+                  } else {
+                    setCurrentValue(eventValue);
                   }
                 }}
                 onFocus={e => {
