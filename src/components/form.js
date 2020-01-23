@@ -33,6 +33,8 @@
   jsx: (
     <div className={classes.root}>
       {(() => {
+        // eslint-disable-next-line
+        const history = useHistory();
         const { Action, Children, getEndpoint } = B;
         const {
           actionId,
@@ -59,7 +61,7 @@
                 localStorage.setItem('TOKEN', data[`action${actionId}`].token);
               }
               if (data && url) {
-                useHistory().push(url);
+                history.push(url);
               }
               return (
                 <>
