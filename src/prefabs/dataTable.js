@@ -1,10 +1,10 @@
 (() => ({
-  name: 'DataTable',
+  name: '@betty-blocks/default/DataTable',
   icon: 'DataTable',
   category: 'DATA',
   structure: [
     {
-      name: 'DataTable',
+      name: '@betty-blocks/default/DataTable',
       options: [
         {
           value: '',
@@ -45,7 +45,7 @@
       ],
       descendants: [
         {
-          name: 'DataTableColumn',
+          name: '@betty-blocks/default/DataTableColumn',
           options: [
             {
               value: '',
@@ -83,7 +83,7 @@
           ],
           descendants: [
             {
-              name: 'Text',
+              name: '@betty-blocks/default/Text',
               options: [
                 {
                   type: 'VARIABLE',
@@ -127,7 +127,7 @@
           ],
         },
         {
-          name: 'DataTableColumn',
+          name: '@betty-blocks/default/DataTableColumn',
           options: [
             {
               value: '',
@@ -165,7 +165,7 @@
           ],
           descendants: [
             {
-              name: 'Text',
+              name: '@betty-blocks/default/Text',
               options: [
                 {
                   type: 'VARIABLE',

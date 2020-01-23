@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Accordion Item',
+  name: '@betty-blocks/default/AccordionItem',
   icon: 'AccordionItemIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'AccordionItem',
+      name: '@betty-blocks/default/AccordionItem',
       options: [
         {
           type: 'VARIABLE',
@@ -15,7 +15,7 @@
       ],
       descendants: [
         {
-          name: 'Text',
+          name: '@betty-blocks/default/Text',
           options: [
             {
               type: 'VARIABLE',

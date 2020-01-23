@@ -1,10 +1,10 @@
 (() => ({
-  name: '1 column',
+  name: '@betty-blocks/default/OneColumn',
   icon: 'RowColumnIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Row',
+      name: '@betty-blocks/default/Row',
       options: [
         {
           type: 'CUSTOM',
@@ -47,7 +47,7 @@
       ],
       descendants: [
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: 'flexible',

@@ -1,10 +1,10 @@
 (() => ({
-  name: 'BreadCrumb Item',
+  name: '@betty-blocks/default/BreadCrumbItem',
   icon: 'BreadcrumbItemIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'BreadcrumbItem',
+      name: '@betty-blocks/default/BreadcrumbItem',
       options: [
         {
           type: 'VARIABLE',

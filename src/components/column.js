@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Column',
+  name: '@betty-blocks/default/Column',
   icon: 'ColumnIcon',
   category: 'LAYOUT',
   type: 'COLUMN',

@@ -1,10 +1,10 @@
 (() => ({
-  name: '4 columns',
+  name: '@betty-blocks/default/FourColumns',
   icon: 'Layout3333Icon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Row',
+      name: '@betty-blocks/default/Row',
       options: [
         {
           type: 'CUSTOM',
@@ -47,7 +47,7 @@
       ],
       descendants: [
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: '3',
@@ -220,7 +220,7 @@
           descendants: [],
         },
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: '3',
@@ -393,7 +393,7 @@
           descendants: [],
         },
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: '3',
@@ -566,7 +566,7 @@
           descendants: [],
         },
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: '3',

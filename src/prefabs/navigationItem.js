@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Navigation Item',
+  name: '@betty-blocks/default/NavigationItem',
   icon: 'NavItemIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'NavigationItem',
+      name: '@betty-blocks/default/NavigationItem',
       options: [
         {
           type: 'VARIABLE',

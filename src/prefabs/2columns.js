@@ -1,10 +1,10 @@
 (() => ({
-  name: '2 columns',
+  name: '@betty-blocks/default/TwoColumns',
   icon: 'Layout66Icon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Row',
+      name: '@betty-blocks/default/Row',
       options: [
         {
           type: 'CUSTOM',
@@ -47,7 +47,7 @@
       ],
       descendants: [
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: '6',
@@ -220,7 +220,7 @@
           descendants: [],
         },
         {
-          name: 'Column',
+          name: '@betty-blocks/default/Column',
           options: [
             {
               value: '6',

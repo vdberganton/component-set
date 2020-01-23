@@ -1,14 +1,14 @@
 (() => ({
-  name: 'Sidebar Left',
-  icon: 'SidebarLeftIcon',
+  name: '@betty-blocks/default/SidebarLeft',
+  icon: 'AlertIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'PageBody',
+      name: '@betty-blocks/default/PageBody',
       options: [],
       descendants: [
         {
-          name: 'SideNavigation',
+          name: '@betty-blocks/default/SideNavigation',
           options: [
             {
               type: 'VARIABLE',
@@ -25,7 +25,7 @@
           ],
           descendants: [
             {
-              name: 'SideNavItem',
+              name: '@betty-blocks/default/SideNavItem',
               options: [
                 {
                   type: 'VARIABLE',
@@ -80,7 +80,7 @@
               descendants: [],
             },
             {
-              name: 'SideNavItem',
+              name: '@betty-blocks/default/SideNavItem',
               options: [
                 {
                   type: 'VARIABLE',
@@ -137,7 +137,7 @@
           ],
         },
         {
-          name: 'PageContent',
+          name: '@betty-blocks/default/PageContent',
           options: [],
           descendants: [],
         },

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'PageBody',
+  name: '@betty-blocks/default/PageBody',
   icon: 'RowIcon',
   category: 'LAYOUT',
   type: 'PAGE_BODY',

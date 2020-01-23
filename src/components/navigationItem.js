@@ -1,5 +1,5 @@
 (() => ({
-  name: 'NavigationItem',
+  name: '@betty-blocks/default/NavigationItem',
   icon: 'NavItemIcon',
   category: 'NAVIGATION',
   type: 'NAVIGATION_ITEM',

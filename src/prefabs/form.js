@@ -1,22 +1,22 @@
 (() => ({
-  name: 'Form',
+  name: '@betty-blocks/default/Form',
   icon: 'FormIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'Form',
+      name: '@betty-blocks/default/Form',
       options: [
         {
           value: '',
-          label: 'Post endpoint',
-          key: 'resourceUrl',
-          type: 'TEXT',
+          label: 'Action',
+          key: 'actionId',
+          type: 'ACTION',
         },
         {
-          value: '',
-          label: 'Redirect after submit',
-          key: 'redirect',
           type: 'ENDPOINT',
+          label: 'Redirect to endpoint after success',
+          key: 'formEndpoint',
+          value: '',
         },
         {
           value: 'Thanks for submitting the form!',
@@ -39,25 +39,35 @@
       ],
       descendants: [
         {
-          name: 'TextInput',
+          name: '@betty-blocks/default/TextInput',
           options: [
             {
               value: '',
-              label: 'Name',
-              key: 'formComponentName',
-              type: 'TEXT',
+              label: 'Input variable',
+              key: 'actionInputId',
+              type: 'ACTION_INPUT',
             },
             {
-              value: 'Label text',
-              label: 'Label text',
+              value: 'Label',
+              label: 'Label',
               key: 'formComponentLabel',
               type: 'TEXT',
             },
             {
-              value: '',
-              label: 'Input text',
-              key: 'formComponentValue',
-              type: 'TEXT',
+              value: 'text',
+              label: 'Input variable type',
+              key: 'formComponentType',
+              type: 'CUSTOM',
+              configuration: {
+                as: 'DROPDOWN',
+                dataType: 'string',
+                allowedInput: [
+                  { name: 'Text', value: 'text' },
+                  { name: 'Number', value: 'number' },
+                  { name: 'Password', value: 'password' },
+                  { name: 'Email', value: 'email' },
+                ],
+              },
             },
             {
               value: false,
@@ -69,25 +79,35 @@
           descendants: [],
         },
         {
-          name: 'TextInput',
+          name: '@betty-blocks/default/TextInput',
           options: [
             {
               value: '',
-              label: 'Name',
-              key: 'formComponentName',
-              type: 'TEXT',
+              label: 'Input',
+              key: 'actionInputId',
+              type: 'ACTION_INPUT',
             },
             {
-              value: 'Label text',
-              label: 'Label text',
+              value: 'Label',
+              label: 'Label',
               key: 'formComponentLabel',
               type: 'TEXT',
             },
             {
-              value: '',
-              label: 'Input text',
-              key: 'formComponentValue',
-              type: 'TEXT',
+              value: 'text',
+              label: 'Type',
+              key: 'formComponentType',
+              type: 'CUSTOM',
+              configuration: {
+                as: 'DROPDOWN',
+                dataType: 'string',
+                allowedInput: [
+                  { name: 'Text', value: 'text' },
+                  { name: 'Number', value: 'number' },
+                  { name: 'Password', value: 'password' },
+                  { name: 'Email', value: 'email' },
+                ],
+              },
             },
             {
               value: false,
@@ -99,7 +119,7 @@
           descendants: [],
         },
         {
-          name: 'SubmitButton',
+          name: '@betty-blocks/default/SubmitButton',
           options: [
             {
               value: 'Submit',
@@ -112,12 +132,6 @@
               label: 'Button Color',
               key: 'backgroundColor',
               type: 'COLOR',
-            },
-            {
-              value: ['0rem', 'M', '0rem', '0rem'],
-              label: 'Outer space',
-              key: 'outerSpacing',
-              type: 'SIZES',
             },
           ],
           descendants: [],

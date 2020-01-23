@@ -1,5 +1,5 @@
 (() => ({
-  name: 'AccordionItem',
+  name: '@betty-blocks/default/AccordionItem',
   icon: 'AccordionItemIcon',
   category: 'LAYOUT',
   type: 'ACCORDION_ITEM',

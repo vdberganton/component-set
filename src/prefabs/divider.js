@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Divider',
+  name: '@betty-blocks/default/Divider',
   icon: 'HorizontalRuleIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Divider',
+      name: '@betty-blocks/default/Divider',
       options: [
         {
           value: 'S',

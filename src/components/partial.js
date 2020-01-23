@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Partial',
+  name: '@betty-blocks/default/Partial',
   type: 'PARTIAL',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

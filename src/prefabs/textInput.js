@@ -1,16 +1,16 @@
 (() => ({
-  name: 'TextInput',
+  name: '@betty-blocks/default/TextInput',
   icon: 'TextInputIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'TextInput',
+      name: '@betty-blocks/default/TextInput',
       options: [
         {
           value: '',
-          label: 'Name',
-          key: 'formComponentName',
-          type: 'TEXT',
+          label: 'Input',
+          key: 'actionInputId',
+          type: 'ACTION_INPUT',
         },
         {
           value: 'Label text',
@@ -19,10 +19,20 @@
           type: 'TEXT',
         },
         {
-          value: '',
-          label: 'Input text',
-          key: 'formComponentValue',
-          type: 'TEXT',
+          value: 'text',
+          label: 'Type',
+          key: 'formComponentType',
+          type: 'CUSTOM',
+          configuration: {
+            as: 'DROPDOWN',
+            dataType: 'string',
+            allowedInput: [
+              { name: 'Text', value: 'text' },
+              { name: 'Number', value: 'number' },
+              { name: 'Password', value: 'password' },
+              { name: 'Email', value: 'email' },
+            ],
+          },
         },
         {
           value: false,

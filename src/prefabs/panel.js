@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Panel',
+  name: '@betty-blocks/default/Panel',
   icon: 'PanelIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Panel',
+      name: '@betty-blocks/default/Panel',
       options: [
         {
           type: 'VARIABLE',
@@ -33,7 +33,7 @@
       ],
       descendants: [
         {
-          name: 'Row',
+          name: '@betty-blocks/default/Row',
           options: [
             {
               type: 'CUSTOM',
@@ -76,7 +76,7 @@
           ],
           descendants: [
             {
-              name: 'Column',
+              name: '@betty-blocks/default/Column',
               options: [
                 {
                   value: 'flexible',

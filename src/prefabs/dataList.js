@@ -1,10 +1,10 @@
 (() => ({
-  name: 'DataList',
-  icon: 'DataList',
+  name: '@betty-blocks/default/DataList',
+  icon: 'DataTable',
   category: 'DATA',
   structure: [
     {
-      name: 'DataList',
+      name: '@betty-blocks/default/DataList',
       options: [
         {
           value: '',

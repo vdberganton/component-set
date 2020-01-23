@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Accordion',
+  name: '@betty-blocks/default/Accordion',
   icon: 'AccordionIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Accordion',
+      name: '@betty-blocks/default/Accordion',
       options: [
         {
           value: '0',
@@ -21,7 +21,7 @@
       ],
       descendants: [
         {
-          name: 'AccordionItem',
+          name: '@betty-blocks/default/AccordionItem',
           options: [
             {
               type: 'VARIABLE',
@@ -32,7 +32,7 @@
           ],
           descendants: [
             {
-              name: 'Text',
+              name: '@betty-blocks/default/Text',
               options: [
                 {
                   type: 'VARIABLE',
@@ -76,7 +76,7 @@
           ],
         },
         {
-          name: 'AccordionItem',
+          name: '@betty-blocks/default/AccordionItem',
           options: [
             {
               type: 'VARIABLE',
@@ -87,7 +87,7 @@
           ],
           descendants: [
             {
-              name: 'Text',
+              name: '@betty-blocks/default/Text',
               options: [
                 {
                   type: 'VARIABLE',
@@ -131,7 +131,7 @@
           ],
         },
         {
-          name: 'AccordionItem',
+          name: '@betty-blocks/default/AccordionItem',
           options: [
             {
               type: 'VARIABLE',
@@ -142,7 +142,7 @@
           ],
           descendants: [
             {
-              name: 'Text',
+              name: '@betty-blocks/default/Text',
               options: [
                 {
                   type: 'VARIABLE',
