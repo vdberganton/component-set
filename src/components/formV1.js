@@ -75,7 +75,7 @@
                     onSubmit={event => {
                       event.preventDefault();
                       callAction({
-                        variables: { input: { variables: state } },
+                        variables: { input: state },
                       });
                     }}
                     className={[

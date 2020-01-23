@@ -47,7 +47,7 @@
 
         const [state, setState] = useState({});
         const { url } =
-          B.env !== 'dev' && formEndpoint && getEndpoint(formEndpoint);
+          env !== 'dev' && formEndpoint && getEndpoint(formEndpoint);
 
         const empty = children.length === 0;
         const isPristine = empty && B.env === 'dev';
@@ -82,7 +82,7 @@
                     onSubmit={event => {
                       event.preventDefault();
                       callAction({
-                        variables: { input: { variables: state } },
+                        variables: { input: state },
                       });
                     }}
                     className={[
