@@ -1,5 +1,5 @@
 (() => ({
-  name: '@betty-blocks/default/Form',
+  name: '@betty-blocks/default/FormV1',
   icon: 'FormIcon',
   category: 'FORM',
   type: 'FORM',
@@ -47,7 +47,7 @@
 
         const [state, setState] = useState({});
         const { url } =
-          env !== 'dev' && formEndpoint && getEndpoint(formEndpoint);
+          B.env !== 'dev' && formEndpoint && getEndpoint(formEndpoint);
 
         const empty = children.length === 0;
         const isPristine = empty && B.env === 'dev';
@@ -55,13 +55,6 @@
         return (
           <Action actionId={actionId}>
             {(callAction, { data, loading, error }) => {
-              if (
-                data &&
-                data[`action${actionId}`] &&
-                data[`action${actionId}`].token
-              ) {
-                localStorage.setItem('TOKEN', data[`action${actionId}`].token);
-              }
               if (data && url) {
                 history.push(url);
               }
