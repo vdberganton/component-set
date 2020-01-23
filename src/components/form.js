@@ -33,9 +33,11 @@
   jsx: (
     <div className={classes.root}>
       {(() => {
+        const { env, Action, Children, getEndpoint } = B;
+
         // eslint-disable-next-line
-        const history = useHistory();
-        const { Action, Children, getEndpoint } = B;
+        const history = env === 'dev' ? { push: x => x } : useHistory();
+
         const {
           actionId,
           formErrorMessage,
