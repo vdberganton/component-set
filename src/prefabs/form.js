@@ -11,6 +11,9 @@
           label: 'Action',
           key: 'actionId',
           type: 'ACTION',
+          configuration: {
+            apiVersion: 'v1',
+          },
         },
         {
           type: 'ENDPOINT',
@@ -42,12 +45,6 @@
           name: '@betty-blocks/default/TextInput',
           options: [
             {
-              value: '',
-              label: 'Input variable',
-              key: 'actionInputId',
-              type: 'ACTION_INPUT',
-            },
-            {
               value: 'Label',
               label: 'Label',
               key: 'formComponentLabel',
@@ -55,7 +52,7 @@
             },
             {
               value: 'text',
-              label: 'Input variable type',
+              label: 'Content format',
               key: 'formComponentType',
               type: 'CUSTOM',
               configuration: {
@@ -74,6 +71,12 @@
               label: 'Required',
               key: 'formComponentRequired',
               type: 'TOGGLE',
+            },
+            {
+              value: '',
+              label: 'Input',
+              key: 'actionInputId',
+              type: 'ACTION_INPUT',
             },
           ],
           descendants: [],
@@ -82,12 +85,6 @@
           name: '@betty-blocks/default/TextInput',
           options: [
             {
-              value: '',
-              label: 'Input',
-              key: 'actionInputId',
-              type: 'ACTION_INPUT',
-            },
-            {
               value: 'Label',
               label: 'Label',
               key: 'formComponentLabel',
@@ -95,7 +92,7 @@
             },
             {
               value: 'text',
-              label: 'Type',
+              label: 'Content format',
               key: 'formComponentType',
               type: 'CUSTOM',
               configuration: {
@@ -114,6 +111,12 @@
               label: 'Required',
               key: 'formComponentRequired',
               type: 'TOGGLE',
+            },
+            {
+              value: '',
+              label: 'Input',
+              key: 'actionInputId',
+              type: 'ACTION_INPUT',
             },
           ],
           descendants: [],

@@ -7,20 +7,14 @@
       name: '@betty-blocks/default/TextInput',
       options: [
         {
-          value: '',
-          label: 'Input',
-          key: 'actionInputId',
-          type: 'ACTION_INPUT',
-        },
-        {
-          value: 'Label text',
-          label: 'Label text',
+          value: 'Label',
+          label: 'Label',
           key: 'formComponentLabel',
           type: 'TEXT',
         },
         {
           value: 'text',
-          label: 'Type',
+          label: 'Content format',
           key: 'formComponentType',
           type: 'CUSTOM',
           configuration: {
@@ -39,6 +33,12 @@
           label: 'Required',
           key: 'formComponentRequired',
           type: 'TOGGLE',
+        },
+        {
+          value: '',
+          label: 'Input',
+          key: 'actionInputId',
+          type: 'ACTION_INPUT',
         },
       ],
       descendants: [],
