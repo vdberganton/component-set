@@ -1,19 +1,16 @@
 (() => ({
-  name: '@betty-blocks/default/FormV1',
+  name: '@betty-blocks/default/LoginForm',
   icon: 'FormIcon',
   category: 'FORM',
   structure: [
     {
-      name: '@betty-blocks/default/FormV1',
+      name: '@betty-blocks/default/LoginForm',
       options: [
         {
           value: '',
           label: 'Action',
           key: 'actionId',
           type: 'ACTION',
-          configuration: {
-            apiVersion: 'v1',
-          },
         },
         {
           type: 'ENDPOINT',
@@ -22,13 +19,13 @@
           value: '',
         },
         {
-          value: 'Thanks for submitting the form!',
+          value: "You're logged in!",
           label: 'Success message',
           key: 'formSuccessMessage',
           type: 'TEXT',
         },
         {
-          value: 'Failed to submit the form!',
+          value: 'Failed to login!',
           label: 'Error message',
           key: 'formErrorMessage',
           type: 'TEXT',
@@ -45,20 +42,14 @@
           name: '@betty-blocks/default/TextInput',
           options: [
             {
-              value: '',
-              label: 'Input variable',
-              key: 'actionInputId',
-              type: 'ACTION_INPUT',
-            },
-            {
-              value: 'Label',
+              value: 'Email',
               label: 'Label',
               key: 'formComponentLabel',
               type: 'TEXT',
             },
             {
-              value: 'text',
-              label: 'Input variable type',
+              value: 'email',
+              label: 'Content format',
               key: 'formComponentType',
               type: 'CUSTOM',
               configuration: {
@@ -66,8 +57,6 @@
                 dataType: 'string',
                 allowedInput: [
                   { name: 'Text', value: 'text' },
-                  { name: 'Number', value: 'number' },
-                  { name: 'Password', value: 'password' },
                   { name: 'Email', value: 'email' },
                 ],
               },
@@ -77,6 +66,12 @@
               label: 'Required',
               key: 'formComponentRequired',
               type: 'TOGGLE',
+            },
+            {
+              value: '',
+              label: 'Input',
+              key: 'actionInputId',
+              type: 'ACTION_INPUT',
             },
           ],
           descendants: [],
@@ -85,20 +80,14 @@
           name: '@betty-blocks/default/TextInput',
           options: [
             {
-              value: '',
-              label: 'Input',
-              key: 'actionInputId',
-              type: 'ACTION_INPUT',
-            },
-            {
-              value: 'Label',
+              value: 'Password',
               label: 'Label',
               key: 'formComponentLabel',
               type: 'TEXT',
             },
             {
-              value: 'text',
-              label: 'Type',
+              value: 'password',
+              label: 'Content format',
               key: 'formComponentType',
               type: 'CUSTOM',
               configuration: {
@@ -106,9 +95,7 @@
                 dataType: 'string',
                 allowedInput: [
                   { name: 'Text', value: 'text' },
-                  { name: 'Number', value: 'number' },
                   { name: 'Password', value: 'password' },
-                  { name: 'Email', value: 'email' },
                 ],
               },
             },
@@ -118,6 +105,12 @@
               key: 'formComponentRequired',
               type: 'TOGGLE',
             },
+            {
+              value: '',
+              label: 'Input',
+              key: 'actionInputId',
+              type: 'ACTION_INPUT',
+            },
           ],
           descendants: [],
         },
@@ -125,7 +118,7 @@
           name: '@betty-blocks/default/SubmitButton',
           options: [
             {
-              value: 'Submit',
+              value: 'Login',
               label: 'Button text',
               key: 'submitButtonText',
               type: 'TEXT',
