@@ -22,6 +22,7 @@
     'BODY_COMPONENT',
     'CONTAINER_COMPONENT',
     'CONTENT_COMPONENT',
+    'TEST',
   ],
   orientation: 'VERTICAL',
   jsx: (
