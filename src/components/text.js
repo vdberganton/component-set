@@ -19,6 +19,7 @@
     return (
       <Tag className={classes.content}>
         {options.content.length > 0 && <B.Text value={options.content} />}
+        {options.special ? 'on' : 'off'}
         {options.content.length === 0 && B.env === 'dev' && (
           <span className={classes.placeholder}>Empty content</span>
         )}
@@ -43,10 +44,12 @@
         textAlign: ({ options: { textAlignment } }) => textAlignment,
         padding: 0,
         whiteSpace: 'pre-wrap',
-        color: ({ options: { type } }) => style.getFontColor(type),
+        color: ({ options: { type, special } }) =>
+          special ? '#ff0000' : style.getFontColor(type),
         fontFamily: ({ options: { type } }) => style.getFontFamily(type),
         fontSize: ({ options: { type } }) => style.getFontSize(type),
-        fontWeight: ({ options: { type } }) => style.getFontWeight(type),
+        fontWeight: ({ options: { type, special } }) =>
+          special ? 700 : style.getFontWeight(type),
         textTransform: ({ options: { type } }) => style.getTextTransform(type),
         letterSpacing: ({ options: { type } }) => style.getLetterSpacing(type),
         [`@media ${B.mediaMinWidth(768)}`]: {

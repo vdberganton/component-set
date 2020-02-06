@@ -7,7 +7,7 @@
   jsx: (() => {
     const [toggle, setToggle] = useState(false);
     useEffect(() => {
-      B.define('action', () => setToggle(v => !v));
+      B.define('Custom', () => setToggle(v => !v));
     }, []);
     return (
       <div className={classes.root}>
@@ -25,6 +25,7 @@
         height: '6rem',
         margin: '1rem',
         padding: '1rem',
+        fontSize: '2rem',
         color: 'rgba(255, 255, 255, 1)',
         borderRadius: '0.125rem',
         justifyContent: 'center',
