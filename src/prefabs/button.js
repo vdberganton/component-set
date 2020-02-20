@@ -7,6 +7,24 @@
       name: 'Button',
       options: [
         {
+          type: 'TOGGLE',
+          label: 'One',
+          key: 'one',
+          value: true,
+        },
+        {
+          type: 'TOGGLE',
+          label: 'Two',
+          key: 'two',
+          value: false,
+        },
+        {
+          type: 'TOGGLE',
+          label: 'Three',
+          key: 'three',
+          value: false,
+        },
+        {
           type: 'VARIABLE',
           label: 'Button text',
           key: 'buttonText',

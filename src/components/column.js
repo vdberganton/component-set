@@ -22,6 +22,7 @@
     'BODY_COMPONENT',
     'CONTAINER_COMPONENT',
     'CONTENT_COMPONENT',
+    'COMPONENT',
     'TEST',
   ],
   orientation: 'VERTICAL',

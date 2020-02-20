@@ -7,6 +7,30 @@
       name: 'Text',
       options: [
         {
+          type: 'TOGGLE',
+          label: 'Special',
+          key: 'special',
+          value: false,
+        },
+        {
+          type: 'TOGGLE',
+          label: 'Seven',
+          key: 'seven',
+          value: false,
+        },
+        {
+          type: 'TOGGLE',
+          label: 'Eight',
+          key: 'eight',
+          value: false,
+        },
+        {
+          type: 'TOGGLE',
+          label: 'Nine',
+          key: 'nine',
+          value: true,
+        },
+        {
           type: 'VARIABLE',
           label: 'Content',
           key: 'content',

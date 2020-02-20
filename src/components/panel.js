@@ -9,7 +9,6 @@
     <div className={classes.panel}>
       {(() => {
         const isEmpty = children.length === 0;
-
         const isPristine = isEmpty && B.env === 'dev';
 
         return (

@@ -7,7 +7,7 @@
   jsx: (() => {
     const [toggle, setToggle] = useState(false);
     useEffect(() => {
-      B.define('Custom', () => setToggle(v => !v));
+      B.defineFunction('Function', () => setToggle(v => !v));
     }, []);
     return (
       <div className={classes.root}>

@@ -16,6 +16,9 @@
       Body1: 'p',
       Body2: 'p',
     }[options.type || 'Body1'];
+    useEffect(() => {
+      B.defineFunction('Focus', () => console.log('Focus'));
+    }, []);
     return (
       <Tag className={classes.content}>
         {options.content.length > 0 && <B.Text value={options.content} />}
