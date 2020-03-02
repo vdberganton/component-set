@@ -1,17 +1,17 @@
 (() => ({
-  name: '@betty-blocks/default/Test',
+  name: '@betty-blocks/default/Count',
   icon: 'ContainerIcon',
-  type: 'TEST',
+  type: 'COUNT',
   allowedTypes: [],
   orientation: 'VERTICAL',
   jsx: (() => {
-    const [toggle, setToggle] = useState(false);
+    const [count, setCount] = useState(0);
     useEffect(() => {
-      B.defineFunction('Function', () => setToggle(v => !v));
+      B.defineFunction('Count', () => setCount(c => c + 1));
     }, []);
     return (
       <div className={classes.root}>
-        <span className={classes.content}>{toggle ? 'on' : 'off'}</span>
+        <span className={classes.content}>{count}</span>
       </div>
     );
   })(),

@@ -23,7 +23,9 @@
     'CONTAINER_COMPONENT',
     'CONTENT_COMPONENT',
     'COMPONENT',
-    'TEST',
+    'TOGGLE',
+    'COUNT',
+    'INPUT',
   ],
   orientation: 'VERTICAL',
   jsx: (

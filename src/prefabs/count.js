@@ -1,22 +1,16 @@
 (() => ({
-  name: 'Component',
+  name: '@betty-blocks/default/Count',
   icon: 'ContainerIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Component',
+      name: '@betty-blocks/default/Count',
       options: [
-        {
-          type: 'TOGGLE',
-          label: 'Toggle',
-          key: 'toggle',
-          value: true,
-        },
         {
           type: 'COLOR',
           label: 'Color',
           key: 'color',
-          value: 'Light',
+          value: 'Danger',
         },
       ],
       descendants: [],
